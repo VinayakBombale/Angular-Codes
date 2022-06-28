@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./main.css" /> -->
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-3 bg-light">
+                <select class="btn btn-success" id="selectBox" onchange="Display()">
+                    <option>Select Your Option</option>
+                    <option>Front End Technology</option>
+                    <option>Back End Technology</option>
+                </select>
+            </div>
+            <div class="col-md-7">
+                <div id="frontEnd">
+                    <h3 class="bg-danger text-white text-center">Front End Technology</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Angular</li>
+                        <li>React Js</li>
+                    </ul>
+                </div>
+                <div id="backEnd">
+                    <h3 class="bg-danger text-white text-center">Back End Technology</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>Paython</li>
+                        <li>.Net c#</li>
+                        <li>C++</li>
+                        <li>C</li>
+                        <li>Node.JS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    document.getElementById("frontEnd").style.display = 'none';
+    document.getElementById("backEnd").style.display = 'none';
+    function Display() {
+        var selectBox = document.getElementById("selectBox");
+        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+        console.log(selectedValue);
+        if (selectedValue === 'Front End Technology') {
+            document.getElementById("frontEnd").style.display = 'inline';
+            document.getElementById("backEnd").style.display = 'none';
+        }
+        else if (selectedValue === 'Back End Technology') {
+            document.getElementById("backEnd").style.display = 'inline';
+            document.getElementById("frontEnd").style.display = 'none';
+
+        }
+        else {
+             document.getElementById("frontEnd").style.display = 'none';
+             document.getElementById("backEnd").style.display = 'none';
+            
+        }
+
+    }
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+                <div class="container">
+                    <div class="col-md-5">
+                        <div class="row-md-5">
+                            <div class="form-group">
+                                <h2 class="font-weight-bold">Search Technology</h2>
+                                <div>
+                                    <label>Search:</label>
+                                    <input type="text" onkeyup="searchElement(event)"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</body>
+</html>
+<script>
+    function searchElement(event) {
+        let val =event.target.value;
+        let arrLanguage = ["Angular","ReactJS","Javascript","HTML","CSS","ES6","JQuery","Ajax"];
+        for (let i = 0; i < arrLanguage.length; i++) {
+            if (arrLanguage[i]===val) {
+                console.log("Selected Technology is Valid");
+                break;
+            }
+            else {
+                console.log("Selected Technology is Not Valid");
+            }
+        }
+    }
+</script>
