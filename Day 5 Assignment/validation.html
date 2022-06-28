@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <h3>Sign Up</h3>
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">Mobile NO</label>
+                    <input type="number" class="form-control" id="value1" />
+                    <span class="alert-danger" id="msg1">please enter your Mobile Number</span>
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">Password</label>
+                    <input type="password" class="form-control" id="value2" />
+                    <span class="alert-danger" id="msg2">please enter your Password</span>
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">Display Name</label>
+                    <input type="text" class="form-control" />
+                </div>
+
+                <div>
+                    <a class="btn btn-primary" onclick="validationmsg()">Submit</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    document.getElementById("msg1").style.display = 'none';
+    document.getElementById("msg2").style.display = 'none';
+
+    let validationmsg = () => {
+        let val1 = document.getElementById("value1");
+        let val2 = document.getElementById("value2");
+
+        let ele1 = parseInt(val1.value);
+        let ele2 = parseInt(val2.value);
+
+        if (!isNaN(ele1) && !isNaN(ele2)) {
+
+            document.getElementById("msg1").style.display = 'none';
+            document.getElementById("msg2").style.display = 'none';
+            window.location = "./log.html";
+
+        }
+
+        if (isNaN(ele1)) {
+            document.getElementById("ms1").style.display = 'inline';
+            document.getElementById("ms1").innerHTML = "please enter your Mobile Number";
+
+        }
+        if (isNaN(ele2)) {
+            document.getElementById("ms2").style.display = 'inline';
+
+        }
+
+    }
+</script>
