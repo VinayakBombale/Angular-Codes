@@ -1,0 +1,29 @@
+<html>
+     <head>
+         <script>
+             function palimdrome(num)
+             {
+                 rem=0;
+                 rev=0;
+                 temp=num;
+                while(num!=0)
+                {
+                    rem=num%10;
+                    rev=(rev * 10)+rem;
+                    num=Math.floor(num/10);
+                }
+                if(temp==rev)
+                {
+                  return  document.write("number is palimdrome");
+                }
+                else
+                {
+                    return document.write("number is not palimdrome");
+                }
+             }
+             palimdrome(122);
+            
+             
+         </script>
+     </head>
+</html>

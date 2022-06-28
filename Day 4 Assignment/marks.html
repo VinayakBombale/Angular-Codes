@@ -1,0 +1,41 @@
+<html>
+     <head>
+         <script>
+                    function totalMarks(sub1,sub2,sub3,sub4,sub5)
+                    {
+                        var total=sub1+sub2+sub3+sub4+sub5;
+                        return total;
+                    }  
+                    function totalPer(per)
+                    {
+                        var percentage=total/500*100;
+                        document.write("percentage::"+percentage+"<br>");
+
+                        if(percentage>80 && percentage<90)
+                        {
+                             document.write("A+ Grade:");
+                        }
+                        else if(percentage>70 && percentage<80)
+                        {
+                            document.write("A Grade:");
+                        }
+                        else if(percentage>60 && percentage<70)
+                        {
+                            document.write("B Grade:");
+                        }
+                        else if(percentage>50 && percentage<60)
+                        {
+                            document.write("C Grade:");
+                        }
+                        else
+                        {
+                            document.write("You Are Fail..");
+                        }
+                    } 
+                    var studentMarks=totalMarks(80,75,77,78,89);
+                    percentage(studentMarks);
+                    document.write("Total::"+studentMarks+"<br>");
+
+         </script>
+     </head>
+</html>

@@ -1,0 +1,36 @@
+<html>
+    <head>
+         <script>function basicSal(salary)
+         {
+                  function salaryHRA(hra)
+                  {
+                    var hra=salary*0.15;
+                    return hra;
+                  }
+                  function salaryPF(pf)
+                  {
+                    var pf=salary*0.7;
+                    return pf;
+                  }
+                  function salaryDA(da)
+                  {
+                    var da=salary*0.2;
+                    return da;
+                  }
+                  return basicSal;
+        }          
+                basicSal(30000);
+                salaryHRA();
+                document.write(hra);
+                document.write(pf);
+                document.write(da);
+                  
+         </script>
+    </head>
+</html>
+
+<!-- var salary=30000;
+                  var hra =salary*0.15;
+                  var pf=salary*0.7;
+                  var da=salary*0.2;
+                  var netSalary=hra+pf+da; -->

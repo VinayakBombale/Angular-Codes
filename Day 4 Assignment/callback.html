@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function Calculator(val1, val2, cb) {
+        let data = cb(val1, val2);
+        return data;
+    }
+
+    let Result = Calculator(10, 20, Addition);
+    console.log("Result for Adding 2 values", Result);
+
+    let Result2 = Calculator(60, 20, Substraction);
+    console.log("Result for Substracting 2 values", Result2);
+
+    let Result3 = Calculator(5, 4, multiply);
+    console.log("Result for multiplication 2 values", Result3);
+
+    let Result4 = Calculator(20, 4, division);
+    console.log("Result for divide 2 values", Result4);
+
+    function Addition(p1, p2) {
+        return p1 + p2;
+    }
+
+    function Substraction(p1, p2) {
+        return p1 - p2;
+    }
+
+    function multiply(p1, p2) {
+        return p1 * p2;
+    }
+
+    function division(p1, p2) {
+        return p1 / p2;
+    }
+</script>
