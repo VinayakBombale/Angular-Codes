@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <button class="btn btn-danger" onclick="Server1()">Server1</button>
+        <button class="btn btn-warning" onclick="Server2()">Server2</button>
+        <button class="btn btn-primary" onclick="Server3()">Server3</button>
+    </div>
+    <br>
+    <div>
+        <button class="btn btn-primary" onclick="check()">check</button>
+    </div>
+
+    <p id="msg"></p>
+</body>
+
+</html>
+<script>
+
+    var servarStatus1 = false;
+    var servarStatus2 = false;
+    var servarStatus3 = false;
+    
+    function Server1() {
+        servarStatus1 = true;
+    }
+   
+    function Server2() {
+        servarStatus2 = true;
+    }
+   
+    function Server3() {
+        servarStatus3 = true;
+    }
+
+
+    function check() {
+        let first_promise = new Promise((Resolve, Reject) => {
+            if (servarStatus1 === true) {
+                setTimeout(() => {
+                    Resolve("Resolved Server first");
+                }, 2000)
+            }
+            else {
+                setTimeout(() => {
+                    Reject("server first not responding ");
+                }, 1000)
+            }
+        });
+
+
+        let second_promise = new Promise((Resolve, Reject) => {
+
+            if (servarStatus2 === true) {
+                setTimeout(() => {
+                    Resolve("Resolved server second");
+                }, 3000);
+            }
+            else {
+                setTimeout(() => {
+                    Reject("Server second  not responding ");
+                }, 2000)
+            }
+        });
+
+
+        let third_promise = new Promise((Resolve, Reject) => {
+            if (servarStatus3 === true) {
+                setTimeout(() => {
+                    Resolve("Resolved server third");
+                }, 4000);
+            }
+            else {
+                setTimeout(() => {
+                    Reject("Server third not responding ");
+                }, 3000)
+            }
+        });
+
+       
+            let result = Promise.all([first_promise, second_promise, third_promise]);
+            result.then((data) => console.log(data)).catch(err=>{
+                console.log("Error ",err);
+            })
+        }
+    
+
+</script>
