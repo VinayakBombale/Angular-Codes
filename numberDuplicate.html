@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="ms1"></div>
+    <div id="ms2"></div>
+</body>
+
+</html>
+<script>
+
+    function arrayDisplay() {
+
+        let array = [10, 20, 30, 20, 40, 50, 20, 30, 50, 60, 50, 80, 90];
+
+        for (let i = 0; i < array.length; i++) {
+            let count = 1;
+            for (let j = i + 1; j < array.length; j++) {
+                if (array[i] === array[j]) {
+                    count++;
+                    array[j] = 0
+                }
+            }
+            if (array[i] != 0) {
+                console.log(array[i] + " is repeted " + count + " times");
+                document.write(array[i] + " is repeted " + count + " times <br>");
+                
+            }
+        }
+
+
+    }
+    arrayDisplay();
+
+</script>
