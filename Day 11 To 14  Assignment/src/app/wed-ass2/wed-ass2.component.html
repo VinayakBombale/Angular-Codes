@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row-mt-4">
+        <div class="col-md-7">
+            <h3 class="font-weight-bold text-center text-white bg-warning">Contact Form:</h3>
+            <div class="form-group">
+                <label class="font-weight-bold">First Name:</label>
+                <input type="text" #firstname class="form-control"/>
+                <span class="font-weight-bold">Length is:{{fName.length}}</span>
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Last Name:</label>
+                <input type="text" #lastname class="form-control"/>
+                <span class="font-weight-bold">Length is:{{lName.length}}</span>
+            </div>
+            <div>
+                <button class="btn btn-primary" (click)="onSubmit(firstname,lastname)">Submit</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+

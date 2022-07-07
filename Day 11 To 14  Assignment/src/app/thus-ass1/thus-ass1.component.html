@@ -1,0 +1,24 @@
+<div class="container">
+   <div class="row-mt-5">
+    <div class="col-md-7">
+        <h3 class="font-weight-bold bg-warning  text-center">Display Data</h3>
+        <div class="form-group">
+            <label class="font-weight-bold">Enter a Number:</label>
+            <input type="text" class="form-control" [(ngModel)]="num"/>
+        </div>
+        <div [ngSwitch]="num">
+            <p *ngSwitchCase="100" class="font-weight-bold">One Hundred</p>
+            <p *ngSwitchCase="101" class="font-weight-bold">One Hundred and One</p>
+            <p *ngSwitchCase="102" class="font-weight-bold">One Hundred and Two</p>
+            <p *ngSwitchCase="103" class="font-weight-bold">One Hundred and Three</p>
+            <p *ngSwitchCase="104" class="font-weight-bold">One Hundred and Four</p>
+            <p *ngSwitchCase="105" class="font-weight-bold">One Hundred and Five</p>
+            <p *ngSwitchDefault class="font-weight-bold">You Have Entered Invalid Number Out Of From List!!</p>
+    
+        </div>
+
+    </div>
+
+   </div>
+
+</div>

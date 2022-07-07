@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row-mt-4">
+        <div class="col-md-8">
+           <h3 class="font-weight-bold bg-success text-white text-center">Employee Leave Request</h3>
+                <div class="form-group">
+                    <label class="font-weight-bold">Employee Code:</label>
+                    <input type="text" class="form-control"  [(ngModel)]="employeeCode"/>
+                    <span class="alert-success font-weight-bold" *ngIf="employeeCode.length===0">Please Enter Department Code</span>
+                    <span class="alert-warning text-dark font-weight-bold" *ngIf="employeeCode.length>4 && employeeCode.length<8">Code Entered Successfully</span>
+                    <span class="alert-danger text-dark font-weight-bold" *ngIf="employeeCode.length>8">Something Wrong!!</span>
+
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">Department:</label>
+                    <input type="text" class="form-control" [(ngModel)]="department"/>
+                    <span class="alert-success font-weight-bold" *ngIf="department.length===0">Enter Department Name</span>
+                   
+
+                </div>
+                <div>
+                    <button class="btn btn-primary font-weight-bold">Send</button>
+                </div>
+        </div>
+
+    </div>
+
+</div>

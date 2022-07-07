@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row-mt-5">
+        <div class="col-md-7">
+            <h3 class="font-weight-bold bg-warning  text-center">List Of Names</h3>
+            <ul [ngStyle]="{'color':colour}">
+                <h4><li class="font-weight-bold">Vinayak</li></h4>
+                <h4><li class="font-weight-bold">Pradip</li></h4>
+                <h4><li class="font-weight-bold">Ranjit</li></h4>
+                <h4><li class="font-weight-bold">Yashraj</li></h4>
+                <h4><li class="font-weight-bold">Ajay</li></h4>
+                
+            </ul>
+            <div>
+                <button (click)="onRed()"  class="btn btn-danger">Red</button>
+                <button (click)="onBlue()" class="btn btn-primary">Blue</button>
+                <button (click)="onGreen()" class="btn btn-success">Green</button>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
