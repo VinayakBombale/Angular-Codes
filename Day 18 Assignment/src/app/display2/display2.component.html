@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="table table-striped">
+        <h3 class="font-weight-bold">Display Employees Data</h3>
+        <th class="font-weight-bold">Employee Id</th>
+        <th class="font-weight-bold">Employees Name</th>
+        <th class="font-weight-bold">Employees Status</th>
+        <tr *ngFor="let arrData of arrayData">
+            <td class="font-weight-bold">{{arrData.empid}}</td>
+            <td class="font-weight-bold">{{arrData.empname}}</td>
+            <td class="font-weight-bold">{{arrData.status |userStatus}}</td>
+            
+        </tr>
+
+    </div>
+</div>

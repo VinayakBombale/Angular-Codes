@@ -1,0 +1,28 @@
+<div class="container text-center">
+    <h3 class="font-weight-bold text-center">Display Data Using Pipes..</h3>
+    <div>
+        <h5>Simple Sentence: {{Result1}}</h5>
+        <h5>Data In uppercase:{{Result1 | uppercase}}</h5>
+        <h5>Data In Lowercase:{{Result1 | lowercase}}</h5>
+        <h5>Data In TitleCase:{{Result1 | titlecase}}</h5>
+
+    </div>
+    <br><br>
+    <div>
+        <h5>Simple Number:{{Result2}}</h5>
+        <h5>Currancy in India:{{Result2 | currency:'INR'}}</h5>
+        <h5>Currancy in Us:{{Result2 | currency:'USD'}}</h5>
+        <h5>Currancy in Euro:{{Result2 | currency:'EUR'}}</h5>
+    </div>
+    <br><br>
+    <div>
+        <h5>Todays Date:{{TodaysDate}}</h5>
+        <h5>Date Custom Format : {{TodaysDate | date:'dd-MM-yyyy'}}</h5>
+        <h5>Date Custom Format : {{TodaysDate | date:'dd-MMM-yyyy'}}</h5>
+        <h5>Date and Time : {{TodaysDate | date:'dd-MMM-yyyy hh:mm:ss'}}</h5>
+
+
+    </div>
+
+
+</div>
