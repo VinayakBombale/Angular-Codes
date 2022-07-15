@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-4">
+            <div>
+                <h5>Employee Id: {{empId1}}</h5>
+                <button class="btn btn-primary m-2"  (click)="onCounterHandler()">Click</button>
+                <button class="btn btn-primary m-2"  (click)="onDestroyHandler()">Destroy </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <app-emp-details *ngIf="childShow" [propCounter]="empId1"></app-emp-details>
+</div>
