@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-striped">
+                <thead>
+                <th class="font-weight-bold">User Id</th>
+                <th class="font-weight-bold">User Name</th>
+                <!-- <th class="font-weight-bold">User Status</th>
+                <th class="font-weight-bold">Role Assign</th> -->
+                </thead> 
+                <tbody *ngFor="let arrData of userData" class="font-weight-bold">
+                <tr> 
+                    <td>{{arrData.userId}}</td>
+                    <td>{{arrData.userName}}</td>
+                    <!-- <td>{{arrData.userStatus}}</td>
+                    <td>{{arrData.roleAssign}}</td> -->
+                    <td><button class="btn btn-info" (click)="onDetails(arrData.userId)">Details</button></td>
+                </tr>
+                <tr *ngIf="selecteduserId === arrData.userId">
+                    <td colspan="4">
+                        <app-display3child [propUser]="arrData"></app-display3child>
+                    </td>
+                </tr>
+               
+            </tbody>
+
+            </table>
+           
+
+        </div>
+
+    </div>
+
+</div>

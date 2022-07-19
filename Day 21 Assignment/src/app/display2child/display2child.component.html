@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <form #product="ngForm" (ngSubmit)="onSubmit(product)">
+                <div class="form-group">
+                    <label class="font-weight-bold">Product Id</label>
+                    <input type="text" class="form-control"name="pid" ngModel/>
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">Product Name</label>
+                    <input type="text" class="form-control" name="pname" ngModel/>
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">Price</label>
+                    <input type="text" class="form-control" name="price" ngModel/>
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">Size</label>
+                    <input type="text" class="form-control" name="size" ngModel/>
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">Status</label>
+                    <input type="text" class="form-control" name="status" ngModel/>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success mr-4" type="submit" >Submit</button>
+                    <button class="btn btn-danger" type="reset" >Reset</button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

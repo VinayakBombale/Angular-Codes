@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-striped">
+                <th class="font-weight-bold">Product Id</th>
+                <th class="font-weight-bold">Product Name</th>
+                <th class="font-weight-bold">Product Price</th>
+                <th class="font-weight-bold">Product Size</th>
+                <th class="font-weight-bold">Product Status</th>
+
+                <tr *ngFor="let arr of productData">
+
+                    <td>{{arr.pid}}</td>
+                    <td>{{arr.pname}}</td>
+                    <td>{{arr.price}}</td>
+                    <td>{{arr.size}}</td>
+                    <td>{{arr.status}}</td>
+
+                </tr>
+
+            </table>
+            <div>
+                <app-display2child (productUpdate)="onProductUpdate($event)"></app-display2child>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
