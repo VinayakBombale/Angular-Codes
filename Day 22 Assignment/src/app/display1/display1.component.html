@@ -1,0 +1,47 @@
+
+<div class="container">
+    <div class="row mt-2">
+        <div class="col-md-6">
+            <h3 class="bg-warning text-center  text-white">Employee Info</h3>
+            <table class="table table-striped">
+                <thead>
+                <th class="font-weight-bold">Employee Id</th>
+                <th class="font-weight-bold">Employee Name</th>
+                <th class="font-weight-bold">Salary</th>
+                </thead>
+                <tbody *ngFor="let Emp of empData">
+                <tr>
+                    <td>{{Emp.EmpId}}</td>
+                    <td>{{Emp.Empname}}</td>
+                    <td>{{Emp.Salary}}</td>
+                  
+                    <td><button class="btn btn-success text-white" (click)="onDetails(Emp)">Details</button></td>
+                </tr> 
+              </tbody>
+            </table>
+        </div>
+        <div>
+                <!-- <span colspan="4">
+                    <app-display1child [propUser]="selecteduser"></app-display1child>
+                </span> -->
+        </div>
+
+    </div>
+    <div class="col-6">
+        <table class="table table-striped">
+            <thead>
+            <th class="font-weight-bold">Employee Id</th>
+            <th class="font-weight-bold">Employee Name</th>
+            <th class="font-weight-bold">Salary</th>
+            </thead>
+            <tbody *ngFor="let Emp of empData2">
+            <tr>
+                <td>{{Emp.EmpId}}</td>
+                <td>{{Emp.Empname}}</td>
+                <td>{{Emp.Salary}}</td>
+              
+            </tr> 
+          </tbody>
+        </table>
+    </div>
+
