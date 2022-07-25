@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-6">
+        <table class="table table-striped">
+            <thead>
+                <th>Employee Id</th>
+                <th>Employee Name</th>
+                <th>Employee Designation</th>
+                <th>Employee Status</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of empData">
+                    <td>{{emp.id}}</td>
+                    <td>{{emp.employeename}}</td>
+                    <td>{{emp.designation}}</td>
+                    <td>{{emp.status}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-6">
+        <h5>Add New Employee</h5>
+        <form [formGroup]="frmEmp" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label class="font-weight-bold">Emp Id</label>
+                <input type="text" class="form-control" formControlName="id"/>
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Emp Name</label>
+                <input type="text" class="form-control" formControlName="employeename"/>
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Designation</label>
+                <input type="text" class="form-control" formControlName="designation"/>
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Status</label>
+                <input type="text" class="form-control" formControlName="status"/>
+            </div>
+            <div class="form-group">
+               <button type="submit" class="btn btn-success mr-4">Submit</button>
+               <button type="reset" class="btn btn-danger">Reset</button>
+            </div>
+        </form>
+    </div>
+</div>
